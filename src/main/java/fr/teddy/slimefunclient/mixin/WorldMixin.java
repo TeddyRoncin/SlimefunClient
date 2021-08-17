@@ -1,6 +1,6 @@
 package fr.teddy.slimefunclient.mixin;
 
-import fr.teddy.slimefunclient.block.ISlimefunBlock;
+import fr.teddy.slimefunclient.block.override.ISlimefunBlock;
 import fr.teddy.slimefunclient.machine.Machine;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

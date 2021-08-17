@@ -3,20 +3,15 @@ package fr.teddy.slimefunclient.mixin;
 import fr.teddy.slimefunclient.machine.Machine;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket;
 import net.minecraft.network.packet.s2c.play.ChunkDataS2CPacket;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.biome.source.BiomeArray;
 import net.minecraft.world.chunk.WorldChunk;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(ClientPlayNetworkHandler.class)
 public class ClientPlayNetworkHandlerMixin {
