@@ -14,8 +14,4 @@ public class SlimefunFenceBlock extends FenceBlock implements ISlimefunBlock {
         return Blocks.OAK_FENCE.getDefaultState();
     }
 
-    @Override
-    public BlockState replaceBlock(BlockState vanillaBlock) {
-        return this.getDefaultState();
-    }
 }

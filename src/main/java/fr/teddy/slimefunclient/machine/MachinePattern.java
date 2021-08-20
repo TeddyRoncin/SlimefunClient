@@ -23,7 +23,8 @@ public class MachinePattern {
 
     public boolean isMachineCompleted(BlockPos controller, ClientWorld world) {
         for (MachineBlock block : this.blocks) {
-            if (!block.block.getVanillaBlockClass().isInstance(world.getBlockState(controller.add(block.pos)).getBlock())) {
+            BlockState blockState = world.getBlockState(controller.add(block.pos));
+            if (!block.block.getVanillaBlockClass().isInstance(blockState.getBlock()) || !block.block.arePropertiesMatching(blockState)) {
                 return false;
             }
         }

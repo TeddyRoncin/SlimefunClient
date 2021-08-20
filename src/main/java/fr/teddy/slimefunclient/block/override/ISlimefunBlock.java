@@ -7,6 +7,10 @@ public interface ISlimefunBlock {
 
     BlockState getVanillaBlockState(BlockState state);
 
-    BlockState replaceBlock(BlockState vanillaBlock);
+    BlockState getDefaultState();
+
+    default BlockState replaceBlock(BlockState vanillaBlock) {
+        return this.getDefaultState();
+    }
 
 }

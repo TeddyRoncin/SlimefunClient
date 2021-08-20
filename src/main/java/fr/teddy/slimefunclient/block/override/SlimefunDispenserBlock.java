@@ -1,6 +1,8 @@
 package fr.teddy.slimefunclient.block.override;
 
 import net.minecraft.block.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 
 public class SlimefunDispenserBlock extends DispenserBlock implements ISlimefunBlock {
 
@@ -22,4 +24,8 @@ public class SlimefunDispenserBlock extends DispenserBlock implements ISlimefunB
                 .with(DispenserBlock.TRIGGERED, vanillaBlock.get(DispenserBlock.TRIGGERED));
     }
 
+    @Override
+    public boolean isTranslucent(BlockState state, BlockView world, BlockPos pos) {
+        return true;
+    }
 }

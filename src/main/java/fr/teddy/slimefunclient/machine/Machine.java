@@ -18,8 +18,18 @@ public class Machine {
             new MachineBlock(0, 1, 0, SlimefunBlocks.Grindstone.FENCE)
     );
 
+    private static final MachinePattern ENHANCED_CRAFTING_TABLE = new MachinePattern(
+            new MachineBlock(0, 0, 0, SlimefunBlocks.EnhancedCraftingTable.DISPENSER),
+            new MachineBlock(0, 1, 0, SlimefunBlocks.EnhancedCraftingTable.CRAFTING_TABLE)
+    );
+
+    private static final MachinePattern ARMOR_FORGE = new MachinePattern(
+            new MachineBlock(0, 0, 0, SlimefunBlocks.ArmorForge.DISPENSER),
+            new MachineBlock(0, 1, 0, SlimefunBlocks.ArmorForge.ANVIL)
+    );
+
     private static final MachinePattern[] machinePatterns = new MachinePattern[] {
-            CHEST, GRINDSTONE
+            CHEST, GRINDSTONE, ENHANCED_CRAFTING_TABLE, ARMOR_FORGE
     };
 
     public static boolean replaceBlocksByMachines(BlockPos pos) {

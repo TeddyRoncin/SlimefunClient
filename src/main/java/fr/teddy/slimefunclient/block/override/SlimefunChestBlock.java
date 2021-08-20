@@ -15,9 +15,5 @@ public class SlimefunChestBlock extends ChestBlock implements ISlimefunBlock {
         return Blocks.CHEST.getDefaultState();
     }
 
-    @Override
-    public BlockState replaceBlock(BlockState vanillaBlock) {
-        return this.getDefaultState();
-    }
 
 }
